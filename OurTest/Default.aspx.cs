@@ -26,10 +26,6 @@ namespace OurTest
             int idx = 3; // 0=first column, 1=second column, 2=third column...
             lblPizzaPrice.Text = GridView1.SelectedRow.Cells[idx].Text;
 
-            //TextBox2.Text += GridView4.Rows[i].Cells[1].Value.ToString() + ", ";
-            //txtPizzaPrice.Text = Gridview1.SelectedRow.Cells[1].Text;
-            //lblPizzaPrice.Text = Gridview1.SelectedRow.Cells[2].Text;
-            //lblPizzaPrice.Text = Gridview1.SelectedRow.Cells[3].Text;
         }
     }
 }
