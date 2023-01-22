@@ -4,9 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="21860cf9dce542cb9c1e00ca90702390" Name="Diagram1">
+      <Diagram DiagramId="1c6c173dbed743aa87ae4a5efbd57488" Name="Diagram1">
         <EntityTypeShape EntityType="testModel.Person" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="testModel.Pizza" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="testModel.Pizza" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
         <AssociationConnector Association="testModel.FK_Pizza_ToPerson" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
