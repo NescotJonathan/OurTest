@@ -40,8 +40,7 @@
         <asp:Button ID="btnSaveNew" runat="server" Text="Save New Student" OnClick="btnSaveNew_Click" />
         <asp:Button ID="BtnSaveEdit" runat="server" Text="Save Edit" OnClick="BtnSaveEdit_Click" />
         <asp:Button ID="btnDeleteStudent" runat="server" Text="Delete Student" OnClick="btnDeleteStudent_Click" />
-        <br /><br /><br />
-        <br />
+        <br /><br /><br /><br /><br /><br />
     </form>
 </body>
 </html>

@@ -75,7 +75,7 @@ namespace OurTest
             var students = db.Students.Find(grdSelectedStudent.SelectedValue);
             db.Entry(students).State = System.Data.Entity.EntityState.Deleted;
             //db.Entry(students).State = System.Data.Entity.EntityState.Deleted;
-            db.SaveChanges();
+            db.SaveChanges(); //works now
             grdSelectedStudent.DataBind();
         }
 
