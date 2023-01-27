@@ -11,7 +11,7 @@ namespace OurTest
 {
 
 
-    public partial class Student
+    public partial class Student1
     {
 
         /// <summary>
@@ -42,6 +42,15 @@ namespace OurTest
         protected global::System.Web.UI.WebControls.TextBox txtStudentName;
 
         /// <summary>
+        /// lblNameCheck control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNameCheck;
+
+        /// <summary>
         /// lblStudentSecondName control.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace OurTest
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtStudentSecondName;
+
+        /// <summary>
+        /// lblSecondNameCheck control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSecondNameCheck;
 
         /// <summary>
         /// lblDate control.
@@ -78,6 +96,15 @@ namespace OurTest
         protected global::System.Web.UI.WebControls.TextBox txtDate;
 
         /// <summary>
+        /// lblDateCheck control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDateCheck;
+
+        /// <summary>
         /// Calendar1 control.
         /// </summary>
         /// <remarks>
@@ -85,6 +112,24 @@ namespace OurTest
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Calendar Calendar1;
+
+        /// <summary>
+        /// grdSelectedStudent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grdSelectedStudent;
+
+        /// <summary>
+        /// SqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
 
         /// <summary>
         /// btnNewStudent control.
@@ -105,13 +150,13 @@ namespace OurTest
         protected global::System.Web.UI.WebControls.Button btnSaveNew;
 
         /// <summary>
-        /// btnSaveEdit control.
+        /// BtnSaveEdit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSaveEdit;
+        protected global::System.Web.UI.WebControls.Button BtnSaveEdit;
 
         /// <summary>
         /// btnDeleteStudent control.
@@ -121,23 +166,5 @@ namespace OurTest
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDeleteStudent;
-
-        /// <summary>
-        /// grdSelectedStudent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdSelectedStudent;
-
-        /// <summary>
-        /// SqlDataSourceStudent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceStudent;
     }
 }

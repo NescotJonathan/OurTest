@@ -18,5 +18,10 @@ namespace OurTest
         {
             Response.Redirect("Default.aspx");
         }
+
+        protected void GridView4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
