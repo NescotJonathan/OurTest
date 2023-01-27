@@ -5,9 +5,14 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="1c6c173dbed743aa87ae4a5efbd57488" Name="Diagram1">
-        <EntityTypeShape EntityType="testModel.Person" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="testModel.Pizza" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
-        <AssociationConnector Association="testModel.FK_Pizza_ToPerson" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="testModel.Person" Width="1.5" PointX="0.75" PointY="0.875" />
+        <EntityTypeShape EntityType="testModel.Pizza" Width="1.5" PointX="3" PointY="0.875" />
+        <AssociationConnector Association="testModel.FK_Pizza_ToPerson" />
+        <EntityTypeShape EntityType="testModel.Class" Width="1.5" PointX="0.625" PointY="3.25" />
+        <EntityTypeShape EntityType="testModel.Enrolment" Width="1.5" PointX="2.875" PointY="3" />
+        <EntityTypeShape EntityType="testModel.Student" Width="1.5" PointX="5.75" PointY="3.125" />
+        <AssociationConnector Association="testModel.FK_Enrolment_ToClass" />
+        <AssociationConnector Association="testModel.FK_Enrolment_ToStudent" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

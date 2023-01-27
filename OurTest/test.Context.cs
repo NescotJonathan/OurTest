@@ -27,5 +27,8 @@ namespace OurTest
     
         public virtual DbSet<Person> People { get; set; }
         public virtual DbSet<Pizza> Pizzas { get; set; }
+        public virtual DbSet<Class> Classes { get; set; }
+        public virtual DbSet<Enrolment> Enrolments { get; set; }
+        public virtual DbSet<Student> Students { get; set; }
     }
 }
