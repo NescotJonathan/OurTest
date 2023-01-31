@@ -12,9 +12,11 @@ namespace OurTest
     public partial class Default : System.Web.UI.Page
     {
         private String sessionFirstName;
+        private String sessionID;
         protected void Page_Load(object sender, EventArgs e)
         {
             lblName.Text = (string)Session["MySessionName"];
+            txtID.Text = (string)Session["MySessionID"];
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
@@ -68,7 +70,18 @@ namespace OurTest
 
         protected void btnNewItem_Click(object sender, EventArgs e)
         {
+            if (lblCheck.Text.Trim().Length == 0)
+            {
+                sessionID = "NULL";
+            }
+            else
+            {
+                sessionID = lblCheck.Text.Trim();
+            }
 
+            lblCheck.Text = sessionID;
+            Session["MySessionID"] = sessionID;
+            Response.Redirect("OrderItems.aspx");
         }
 
         protected void btnSaveNewItem_Click(object sender, EventArgs e)
@@ -90,6 +103,9 @@ namespace OurTest
         {
             //txtFirstName.Text = GridView3.SelectedValue.ToString();
             //txtMyNumber.Text = GridView3.SelectedValue.ToString();
+            int idc = 1; // 0=first column, 1=second column, 2=third column...
+            txtID.Text = GridView3.SelectedRow.Cells[idc].Text;
+            lblCheck.Text = GridView3.SelectedRow.Cells[idc].Text;
 
             int idx = 2; // 0=first column, 1=second column, 2=third column...
             txtFirstName.Text = GridView3.SelectedRow.Cells[idx].Text;
