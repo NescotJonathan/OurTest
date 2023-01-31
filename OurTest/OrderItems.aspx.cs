@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -64,6 +65,29 @@ namespace OurTest
             txtTotal.Text= total.ToString();
 
 
+        }
+
+        protected void btnCommit_Click(object sender, EventArgs e)
+        {
+            testEntities1 db = new testEntities1();
+            var pizzas = new Pizza();
+            pizzas.Customer_ID = int.Parse(txtID.Text.ToString());
+            pizzas.PizzaPrice = Decimal.Parse(txtTotal.Text.ToString());
+
+            db.Pizzas.Add(pizzas);
+
+            db.SaveChanges();
+            grdSelectedPizza.DataBind();
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnReturn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
         }
     }
 }

@@ -34,9 +34,9 @@
             <br /><br /><br />
             <asp:Label ID="lblTotal" runat="server" Text="Total: £"></asp:Label>&nbsp;&nbsp;&nbsp;<asp:TextBox ID="txtTotal" runat="server" ReadOnly="True"></asp:TextBox>
             <br /><br /><br />
-            <asp:Button ID="btnCommit" runat="server" Text="COMMIT to DB" />
+            <asp:Button ID="btnCommit" runat="server" Text="COMMIT to DB" OnClick="btnCommit_Click" />
             <br /><br /><br />
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1">
+            <asp:GridView ID="grdSelectedPizza" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                 <Columns>
                     <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
                     <asp:BoundField DataField="Customer_ID" HeaderText="Customer_ID" SortExpression="Customer_ID" />
@@ -45,7 +45,7 @@
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" SelectCommand="SELECT * FROM [Pizza]"></asp:SqlDataSource>
             <br /><br /><br />
-
+            <asp:Button ID="btnReturn" runat="server" Text="Return to Default Page" OnClick="btnReturn_Click" />
             <br /><br /><br />
         </div>
     </form>

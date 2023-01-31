@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -44,7 +45,7 @@ namespace OurTest
             txtPizzaPrice.Text = GridView1.SelectedRow.Cells[idx].Text;
             int myNumber = int.Parse(GridView1.SelectedRow.Cells[idxx].Text.ToString().Trim());
             //----Below Works!---
-            GridView3.SelectRow(myNumber-1);
+            grdSelectedPerson.SelectRow(myNumber-1);
         }
 
         protected void btnShowSession_Click(object sender, EventArgs e)
@@ -86,17 +87,36 @@ namespace OurTest
 
         protected void btnSaveNewItem_Click(object sender, EventArgs e)
         {
+            testEntities1 db = new testEntities1();
+            var person = new Person();
+            person.FirstName = txtFirstName.Text.ToString();
+            person.MyNumber = int.Parse(txtMyNumber.Text.ToString());
+            db.People.Add(person);
 
+            db.SaveChanges();
+            grdSelectedPerson.DataBind();
+            grdSelectedHuman.DataBind();
         }
 
         protected void btnSaveEdit_Click(object sender, EventArgs e)
         {
-
+            testEntities1 db = new testEntities1();
+            var person = db.People.Find(grdSelectedPerson.SelectedValue); 
+            person.FirstName = txtFirstName.Text.ToString();
+            person.MyNumber = int.Parse(txtMyNumber.Text.ToString());
+            db.SaveChanges();
+            grdSelectedPerson.DataBind();
+            grdSelectedHuman.DataBind();
         }
 
         protected void btnDeleteItem_Click(object sender, EventArgs e)
         {
-
+            testEntities1 db = new testEntities1();
+            var person = db.People.Find(grdSelectedPerson.SelectedValue);
+            db.Entry(person).State = System.Data.Entity.EntityState.Deleted;
+            db.SaveChanges();
+            grdSelectedPerson.DataBind();
+            grdSelectedHuman.DataBind();
         }
 
         protected void GridView3_SelectedIndexChanged(object sender, EventArgs e)
@@ -104,13 +124,13 @@ namespace OurTest
             //txtFirstName.Text = GridView3.SelectedValue.ToString();
             //txtMyNumber.Text = GridView3.SelectedValue.ToString();
             int idc = 1; // 0=first column, 1=second column, 2=third column...
-            txtID.Text = GridView3.SelectedRow.Cells[idc].Text;
-            lblCheck.Text = GridView3.SelectedRow.Cells[idc].Text;
+            txtID.Text = grdSelectedPerson.SelectedRow.Cells[idc].Text;
+            lblCheck.Text = grdSelectedPerson.SelectedRow.Cells[idc].Text;
 
             int idx = 2; // 0=first column, 1=second column, 2=third column...
-            txtFirstName.Text = GridView3.SelectedRow.Cells[idx].Text;
+            txtFirstName.Text = grdSelectedPerson.SelectedRow.Cells[idx].Text;
             int idxx = 3;
-            txtMyNumber.Text = GridView3.SelectedRow.Cells[idxx].Text;
+            txtMyNumber.Text = grdSelectedPerson.SelectedRow.Cells[idxx].Text;
             //--Doesn't work (Maybe linking the wrong way around) -> int myNumber = int.Parse(GridView3.SelectedValue.ToString());
             //--Doesn't work (Maybe linking the wrong way around) -> GridView1.SelectRow(myNumber);
         }

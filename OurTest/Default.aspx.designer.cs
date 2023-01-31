@@ -96,13 +96,13 @@ namespace OurTest
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
 
         /// <summary>
-        /// GridView3 control.
+        /// grdSelectedPerson control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView3;
+        protected global::System.Web.UI.WebControls.GridView grdSelectedPerson;
 
         /// <summary>
         /// btnNewItem control.
@@ -141,13 +141,13 @@ namespace OurTest
         protected global::System.Web.UI.WebControls.Button btnDeleteItem;
 
         /// <summary>
-        /// GridView2 control.
+        /// grdSelectedHuman control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView2;
+        protected global::System.Web.UI.WebControls.GridView grdSelectedHuman;
 
         /// <summary>
         /// GridView1 control.
