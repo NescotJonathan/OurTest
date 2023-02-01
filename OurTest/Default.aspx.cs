@@ -115,7 +115,7 @@ namespace OurTest
             db.Entry(person).State = System.Data.Entity.EntityState.Deleted; // DELETING the ROW or RECORD that you SELECTED in THE Datagrid from the DATABASE TABLE
             db.SaveChanges();       //COMMITTING your CHANGE
             grdSelectedPerson.DataBind();       //updating this DATAGRID that you HAD to NAME / RENAME from Datagrid1 to grdSelected... as an ID in your DATAGRID Properties on the WEBFORM to USE
-            grdSelectedHuman.DataBind();        //updating the other DATAGRID that you HAD to NAME / RENAME from Datagrid1 to grdSelected... as an ID in your DATAGRID Properties on the WEBFORM to USE
+            grdSelectedHuman.DataBind();        // updating the other DATAGRID that you HAD to NAME / RENAME from Datagrid1 to grdSelected... as an ID in your DATAGRID Properties on the WEBFORM to USE
         }
 
         protected void GridView3_SelectedIndexChanged(object sender, EventArgs e)
