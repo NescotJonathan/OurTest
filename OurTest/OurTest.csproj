@@ -81,6 +81,7 @@
     </Content>
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="OrderItemsCheck.aspx" />
     <Content Include="OrderItems.aspx" />
     <Content Include="Page2.aspx" />
     <Content Include="Student.aspx" />
@@ -112,6 +113,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="OrderItemsCheck.aspx.cs">
+      <DependentUpon>OrderItemsCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderItemsCheck.aspx.designer.cs">
+      <DependentUpon>OrderItemsCheck.aspx</DependentUpon>
     </Compile>
     <Compile Include="OrderItems.aspx.cs">
       <DependentUpon>OrderItems.aspx</DependentUpon>
