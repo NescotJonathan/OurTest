@@ -12,23 +12,23 @@
             <br /><br />
             <asp:Label ID="lblID" runat="server" Text="ID: "></asp:Label>&nbsp;&nbsp;&nbsp;<asp:TextBox ID="txtID" runat="server" ReadOnly="True"></asp:TextBox>
             <br /><br /><br />
-            <asp:RadioButton ID="rdSmallPizza" runat="server" Text="Small Pizza (£1.50)" GroupName="grpSize" />
+            <asp:RadioButton ID="rdSmallPizza" runat="server" Text="Small Pizza (£1.50)" GroupName="grpSize" AutoPostBack="True" />
             <br /><br />
-            <asp:RadioButton ID="rdLargePizza" runat="server" Text="Large Pizza (£2.20)" Checked="True" GroupName="grpSize" />
+            <asp:RadioButton ID="rdLargePizza" runat="server" Text="Large Pizza (£2.20)" Checked="True" GroupName="grpSize" AutoPostBack="True" />
             <br /><br />
-            <asp:RadioButton ID="rdThinBasePizza" runat="server" Text="Thin Base Pizza (+ £0.20)" GroupName="grpBase" />
+            <asp:RadioButton ID="rdThinBasePizza" runat="server" Text="Thin Base Pizza (+ £0.20)" GroupName="grpBase" AutoPostBack="True" />
             <br /><br />
-            <asp:RadioButton ID="rdThickBasePizza" runat="server" Text="Thick Base Pizza (+ £0.90)" Checked="True" GroupName="grpBase" />
+            <asp:RadioButton ID="rdThickBasePizza" runat="server" Text="Thick Base Pizza (+ £0.90)" Checked="True" GroupName="grpBase" AutoPostBack="True" />
             <br /><br />
-            <asp:CheckBox ID="cbSalami" runat="server" Text="Salami (+ £1.10)" />
+            <asp:CheckBox ID="cbSalami" runat="server" Text="Salami (+ £1.10)" AutoPostBack="True" />
             <br /><br />
-            <asp:CheckBox ID="cbMushrooms" runat="server" Text="Mushrooms (+ £0.90)" />
+            <asp:CheckBox ID="cbMushrooms" runat="server" Text="Mushrooms (+ £0.90)" AutoPostBack="True" />
             <br /><br />
-            <asp:CheckBox ID="cbOnions" runat="server" Text="Onions (+ £0.80)" />
+            <asp:CheckBox ID="cbOnions" runat="server" Text="Onions (+ £0.80)" AutoPostBack="True" />
             <br /><br />
-            <asp:CheckBox ID="cbGreenPeppers" runat="server" Text="Green Peppers (+ £0.70)" />
+            <asp:CheckBox ID="cbGreenPeppers" runat="server" Text="Green Peppers (+ £0.70)" AutoPostBack="True" />
             <br /><br />
-            <asp:CheckBox ID="cbExtraCheese" runat="server" Text="Extra Cheese (+ £0.60)" />
+            <asp:CheckBox ID="cbExtraCheese" runat="server" Text="Extra Cheese (+ £0.60)" AutoPostBack="True" />
             <br /><br /><br />
             <asp:Button ID="btnTotal" runat="server" Text="Click to TOTAL" OnClick="btnTotal_Click" />
             <br /><br /><br />
