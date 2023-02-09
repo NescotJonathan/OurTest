@@ -13,5 +13,15 @@ namespace OurTest
         {
 
         }
+
+        protected void btnAddPizza_Click(object sender, EventArgs e)
+        {
+            txtValue.Text = "5";
+        }
+
+        protected void imgButton_Click(object sender, ImageClickEventArgs e)
+        {
+            txtValue.Text = "5";
+        }
     }
 }

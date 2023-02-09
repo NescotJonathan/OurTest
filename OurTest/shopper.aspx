@@ -16,16 +16,17 @@
     <form id="form1" runat="server">
         <div>
             <br />
-            <img alt="pizza" class="auto-style1" longdesc="pizza" src="italian-mozzarella.jpg" /><br />
-        </div>
+            <asp:ImageButton ID="imgButton" alt="pizza" class="auto-style1" longdesc="pizza" runat="server" src="italian-mozzarella.jpg" OnClick="imgButton_Click"  /></div>
         <div>
             <br />
-            <asp:Button ID="Button1" runat="server" Text="Button" />
+            <asp:Button ID="btnAddPizza" runat="server" Text="Add Pizza" OnClick="btnAddPizza_Click" />
             <br />
         </div>
         <div>
-            <br />
-            <br />
+            <br /><br /><br />
+            <asp:Label ID="lblValue" runat="server" Text="Value"></asp:Label>&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="txtValue" runat="server"></asp:TextBox>            
+            <br /><br /><br />
         </div>
         <div>
             <asp:GridView ID="GridView1" runat="server"></asp:GridView>
