@@ -81,9 +81,11 @@
     </Content>
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="italian-mozzarella.jpg" />
     <Content Include="OrderItemsCheck.aspx" />
     <Content Include="OrderItems.aspx" />
     <Content Include="Page2.aspx" />
+    <Content Include="shopper.aspx" />
     <Content Include="Student.aspx" />
     <Content Include="test.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -142,6 +144,13 @@
       <DependentUpon>test.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="shopper.aspx.cs">
+      <DependentUpon>shopper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="shopper.aspx.designer.cs">
+      <DependentUpon>shopper.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Student.aspx.cs">
       <DependentUpon>Student.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
